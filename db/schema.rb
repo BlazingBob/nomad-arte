@@ -37,7 +37,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_29_195603) do
     t.string "lastname"
     t.boolean "is_owner", default: false
     t.string "username"
-    t.string "address"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
