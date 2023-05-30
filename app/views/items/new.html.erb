@@ -1,0 +1,27 @@
+<div class="row justify-content-center">
+  <div class="col-lg-5">
+    <div class="card p-5">
+      <div class="row justify-content-center">
+        <div class="col-9">
+          <h3>Upload a new item</h3>
+        </div>
+      </div>
+      <hr>
+      <%= simple_form_for @item do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :price_per_day %>
+        <%= f.input :category_name, collection: ['Choose from list', @category_name],
+          label: "Select a category", disabled: ['Choose from list'], selected: 'Choose from list', include_blank: false %>
+        <div class="row justify-content-evenly">
+          <div class="col-12">
+            <%= f.submit class: 'btn input-btn' %>
+          </div>
+          <div class="col-6 offset-4 mt-3">
+            <%= link_to "Back", items_path %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

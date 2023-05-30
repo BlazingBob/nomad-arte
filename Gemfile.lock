@@ -82,6 +82,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
+    bootstrap-select-rails (1.13.8)
     builder (3.2.4)
     capybara (3.39.1)
       addressable
@@ -254,6 +255,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootsnap
+  bootstrap-select-rails
   capybara
   debug
   devise
