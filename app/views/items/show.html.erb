@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-6 align-self-center">
     <div class= "item-image">
-      <img src="<%= @item.image_url %>" alt="Item Image" />
+      <%= cl_image_tag(@item.image.key)%>
     </div>
   </div>
   <div class="col"></div>
@@ -25,6 +25,4 @@
 </div>
 
 
-
-<%# uncoment this line later %>
-<%#= link_to "Back to index", items_path %>
+ <%# <%= link_to "Back to index", items_path %>
