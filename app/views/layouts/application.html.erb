@@ -11,12 +11,40 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
-      <div class="container">
-        <%= yield %>
-      </div>
     <%= render "shared/flashes" %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <%= render 'shared/navbar' %>
+    <%= yield %>
+    <br>
+    <footer class="bg-dark text-light pt-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h4>About Us</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula mauris eget consequat tincidunt.</p>
+          </div>
+          <div class="col-lg-4">
+            <h4>Contact</h4>
+            <p>Email: info@nomadarte.com</p>
+            <p>Phone: +1 123-456-7890</p>
+          </div>
+          <div class="col-lg-4">
+            <h4>Follow Us</h4>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-12 text-center">
+            <p>&copy; 2023 NomadArte. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

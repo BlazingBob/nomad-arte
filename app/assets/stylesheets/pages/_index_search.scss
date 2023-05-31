@@ -1,0 +1,55 @@
+// Specific CSS for your home-page
+/* Custom CSS */
+
+#navbar-color{
+    background-color: #FFD95A    ;
+    border-radius: 5px;
+}
+
+.btn-color{
+    background-color: #C07F00;
+}
+
+h1 {
+    color:#C07F00;
+    text-align: center;
+    font-size: 4em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: bold;
+}
+  
+
+.header{
+    background-image: url('https://sothebys-com.brightspotcdn.com/dims4/default/f96a0ca/2147483647/strip/true/crop/2880x1370+0+755/resize/1440x685!/format/webp/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fdotcom%2F68%2Fda%2Fe0b812ff4caf9d6475245034e301%2Fpf2305-7g7mw-bi-01-cropped-banner.jpg');
+    height: 200px;
+    text-align: center;
+    align-items: center;
+}  
+
+
+.image-card{
+    border-radius: 5px;
+}
+
+.item-card{
+    width: 240px;  
+    padding-bottom: 90px;  
+}
+
+.card-img img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.card-infos {
+    text-align:left;
+    font-size: 10px;
+}
+ 
+// h3 {
+//     text-decoration: none;
+//     font-size: 1em;
+// }
+
+
