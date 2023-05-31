@@ -11,7 +11,7 @@
         <%= f.input :price_per_day %>
         <%= f.input :category_name, collection: ['Choose from list', "Modernism", "Impressionism", "Contemporary", "Photographs"],
           label: "Select a category", disabled: ['Choose from list'], selected: 'Choose from list', include_blank: false %>
-        <%= f.input :photo, as: :file, label: "Upload a photo of your item" %>
+        <%= f.input :image, as: :file, label: "Upload a photo of your item" %>
         <div class="col-12 mt-4">
           <%= f.submit class: 'btn btn-100' %>
         </div>

@@ -1,6 +1,6 @@
 class Item < ApplicationRecord
   belongs_to :user
-  has_one_attached :photo
+  has_one_attached :image
 
   validates :name, :description, :price_per_day, presence: true
   validates :description, length: { minimum: 20 }
