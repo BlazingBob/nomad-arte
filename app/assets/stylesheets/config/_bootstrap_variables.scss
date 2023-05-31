@@ -7,8 +7,10 @@
 // General style
 $font-family-sans-serif: $body-font;
 $headings-font-family:   $headers-font;
-$body-bg:                $light-gray;
+$body-bg:                white;
+$html-bg:                white;
 $font-size-base:         1rem;
+
 
 // Colors
 $body-color: $gray;
@@ -24,3 +26,4 @@ $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 // Override other variables below!
+$primary: $bright-green;

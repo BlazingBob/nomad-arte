@@ -1,0 +1,46 @@
+.align-self-start {
+  align-self: flex-start;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.align-self-end {
+  align-self: flex-end;
+}
+
+.pet-show-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+}
+
+h1 {
+  font-size: 28px;
+  color: #333;
+  margin-top: 0;
+}
+
+.item-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.item-info h2 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.item-info p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.item-info strong {
+  font-weight: bold;
+}

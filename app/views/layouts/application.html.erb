@@ -11,63 +11,40 @@
   </head>
 
   <body>
+    <%= render "shared/flashes" %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <div class="container">
-
-        <%= link_to "Home", root_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Items", items_path, class: "nav-link" %>
-      </li>
-    </ul>
-    <div class="d-flex justify-content-center">
-        <div class="input-group">
-            <form action="<%= items_path %>" method="GET" class="d-flex">
-                <input type="text" class="form-control form-control-sm" name="query" placeholder="Rent your art" aria-label="Search" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
-            </form>
-        </div>
-    </div>
-    <button type="button" class="btn btn-outline-warning">Login</button>
-  </div>
-</nav>
-<br>
-      <%= yield %>
-    </div>
+    <%= render 'shared/navbar' %>
+    <%= yield %>
     <br>
-    <footer class="bg-dark text-light ">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4">
-      <br>
-        <h4>About Us</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula mauris eget consequat tincidunt.</p>
+    <footer class="bg-dark text-light pt-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h4>About Us</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula mauris eget consequat tincidunt.</p>
+          </div>
+          <div class="col-lg-4">
+            <h4>Contact</h4>
+            <p>Email: info@nomadarte.com</p>
+            <p>Phone: +1 123-456-7890</p>
+          </div>
+          <div class="col-lg-4">
+            <h4>Follow Us</h4>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-12 text-center">
+            <p>&copy; 2023 NomadArte. All rights reserved.</p>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-4">
-      <br>
-        <h4>Contact</h4>
-        <p>Email: info@nomadarte.com</p>
-        <p>Phone: +1 123-456-7890</p>
-      </div>
-      <div class="col-lg-4">
-      <br>
-        <h4>Follow Us</h4>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
-          <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-          <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-        </ul>
-      </div>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col-12 text-center">
-        <p>&copy; 2023 NomadArte. All rights reserved.</p>
-      </div>
-    </div>
-  </div>
-</footer>
-
+    </footer>
   </body>
 </html>
