@@ -1,7 +1,7 @@
 <div class="row justify-content-center">
   <div class="col-xl-5">
     <div class="card p-5">
-      <div class="col-6 m-1 d-flex justify-content-center">
+      <div class="m-1 d-flex justify-content-center">
         <h3>Upload a new item</h3>
       </div>
       <hr>
@@ -9,9 +9,10 @@
         <%= f.input :name %>
         <%= f.input :description %>
         <%= f.input :price_per_day %>
-        <%= f.input :category_name, collection: ['Choose from list', @category_name],
+        <%= f.input :category_name, collection: ['Choose from list', ],
           label: "Select a category", disabled: ['Choose from list'], selected: 'Choose from list', include_blank: false %>
-        <div class="col-12">
+        <%= f.input :photo, as: :file, label: "Upload a photo of your item" %>
+        <div class="col-12 mt-4">
           <%= f.submit class: 'btn input-btn' %>
         </div>
         <div class="m-3 d-flex justify-content-center">
