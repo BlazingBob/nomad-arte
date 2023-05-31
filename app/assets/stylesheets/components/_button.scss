@@ -1,8 +1,29 @@
-
 .button {
   padding: 10px 20px;
   border-radius: 4px;
   width: 100%;
   text-align: center;
   margin-top: 20px;
+}
+
+.input-btn {
+  color: black;
+  border-radius: 10px;
+  background-color: #F0A500;
+  border: none;
+  padding: 10px;
+  width: 100%;
+}
+
+.input-btn:hover {
+  background-color: #F0A500;
+}
+
+.btn-100 {
+  color: #F0A500;
+  border-radius: 10px;
+  background-color: black;
+  border: none;
+  padding: 10px;
+  width: 100%;
 }

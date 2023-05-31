@@ -1,0 +1,24 @@
+<div class="row justify-content-center">
+  <div class="col-xl-5">
+    <div class="card p-5">
+      <div class="m-1 d-flex justify-content-center">
+        <h3>Upload a new item</h3>
+      </div>
+      <hr>
+      <%= simple_form_for @item do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :price_per_day %>
+        <%= f.input :category_name, collection: ['Choose from list', "Modernism", "Impressionism", "Contemporary", "Photographs"],
+          label: "Select a category", disabled: ['Choose from list'], selected: 'Choose from list', include_blank: false %>
+        <%= f.input :photo, as: :file, label: "Upload a photo of your item" %>
+        <div class="col-12 mt-4">
+          <%= f.submit class: 'btn btn-100' %>
+        </div>
+        <div class="m-3 d-flex justify-content-center">
+          <%= link_to "Back", items_path %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
