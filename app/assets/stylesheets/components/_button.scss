@@ -6,24 +6,51 @@
   margin-top: 20px;
 }
 
-.input-btn {
-  color: black;
-  border-radius: 10px;
-  background-color: #F0A500;
-  border: none;
-  padding: 10px;
+.full-width-btn {
   width: 100%;
 }
 
-.input-btn:hover {
-  background-color: #F0A500;
-}
-
-.btn-100 {
+.primary-btn {
   color: #F0A500;
   border-radius: 10px;
   background-color: black;
   border: none;
   padding: 10px;
-  width: 100%;
+}
+
+.primary-btn:hover {
+  background-color: #F0A500;
+  transition: all 0.4s ease;
+}
+
+#navbar-btn {
+  color: black;
+  border-radius: 10px;
+  background-color: #F0A500;
+  border: none;
+  padding-inline: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-decoration: none;
+  margin-inline: 5px;
+}
+
+#navbar-btn:hover {
+  color: #F0A500;
+  background-color: black;
+  transition: all 0.4s ease;
+}
+
+.secondary-btn {
+  border-color: #F0A500;
+  border-radius: 10px;
+  padding: 10px;
+  border-width: 2px;
+  text-decoration: none;
+}
+
+.secondary-btn:hover {
+  background-color: #f0a400a8;
+  font-weight: 500;
+  transition: all 0.4s ease;
 }
