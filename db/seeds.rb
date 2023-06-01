@@ -48,7 +48,4 @@ item = Item.new(name: "Sebastião Salgado", description: "Photograph" , price_pe
 item.image.attach(io: file, filename: "nes.png", content_type: "image/png")
 item.save!
 
-file = URI.open("https://dam.sothebys.com/dam/image/Item/4beced70-644d-4ef6-8e29-8197913fd84a/primary/medium")
-item = Item.new(name: "Salgado", description: "Photograph" , price_per_day: 79, category_name: "Photographs", user: lunna)
-item.image.attach(io: file, filename: "nes.png", content_type: "image/png")
-item.save!
+ 
