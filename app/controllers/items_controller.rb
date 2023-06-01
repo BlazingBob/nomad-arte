@@ -1,9 +1,12 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.all
-    query = params[:query]
-    if query.present?
-      @items = Item.where('name LIKE ?', "%#{query.capitalize}")
+    @query = params[:query]
+    if @query.present?
+      sql_subquery = "title ILIKE ? OR synopsis ILIKE :query"
+      @items = Item.where('name ILIKE ?', "%#{@query}")
+    else
+      "No results found"
     end
   end
 
