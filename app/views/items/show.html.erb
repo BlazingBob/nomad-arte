@@ -15,7 +15,6 @@
         <p>Category: <%= @item.category_name %></p>
         <p><i>Owner: <%= @item.user.username %></i></p>
       </div>
-      <%#= link_to "Rent it!", "#", class: "btn btn-outline-secondary button" %>
     </div>
 
     <div class="col align-self-start">
@@ -26,13 +25,15 @@
         </button>
     </div>
 
-    <div class="col-6">
+    <div class="col-6 book-form">
+      <fieldset>
         <%= simple_form_for [@item, @booking] do |f| %>
         <%= f.input :start_date, as: :date, order: [:day, :month, :year] %>
         <%= f.input :end_date, as: :date, order: [:day, :month, :year] %>
         <%= f.input :total_price %>
         <%= f.button :submit, "Rent it" %>
       <% end %>
+      </fieldset>
     </div>
   </div>
 </div>
