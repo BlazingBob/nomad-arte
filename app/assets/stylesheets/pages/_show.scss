@@ -1,3 +1,15 @@
+fieldset {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+h1 {
+  font-size: 28px;
+  color: #333;
+  margin-top: 0;
+}
+
 .align-self-start {
   align-self: flex-start;
 }
@@ -18,16 +30,11 @@
   border: 1px solid #ccc;
 }
 
-h1 {
-  font-size: 28px;
-  color: #333;
-  margin-top: 0;
-}
 
 .item-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -43,4 +50,20 @@ h1 {
 
 .item-info strong {
   font-weight: bold;
+}
+
+.book-form, .form-select, .form-control {
+  font-size: 12px! important;
+}
+
+.btn {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  float: right;
+}
+
+.btn:hover {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #aaa;
 }
