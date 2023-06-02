@@ -28,12 +28,22 @@ p {
 }
 
 .header{
-    background-image: url('https://sothebys-com.brightspotcdn.com/dims4/default/f96a0ca/2147483647/strip/true/crop/2880x1370+0+755/resize/1440x685!/format/webp/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fdotcom%2F68%2Fda%2Fe0b812ff4caf9d6475245034e301%2Fpf2305-7g7mw-bi-01-cropped-banner.jpg');
-    height: 200px;
-    text-align: center;
-    align-items: center;
+    height: 150px;
+    background-image: url('https://d1ih9tlfsfrtid.cloudfront.net/ZPHzPmoTaiksz8vGFOXX_17716-1.jpg');
+    background-size: cover;
+    background-position: center; /* Adjust the position as needed */
+    /* Alternatively, you can use separate x and y positions */
+    background-position-x: center; 
+    background-position-y: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
+.header h1 {
+    font-size: 6em;
+    color: rgba(#df9413, 0.8);
+
+}
 
 .image-card{
     border-radius: 5px;
@@ -42,6 +52,7 @@ p {
 .item-card{
     width: auto;  
     padding-bottom: 90px;  
+    padding-right: 20px;
 }
 
 .card-img {
@@ -49,6 +60,9 @@ p {
     height: 300px;
     margin-bottom: 20px;
     background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
 }
 
 .card-infos {
