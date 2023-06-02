@@ -23,21 +23,19 @@
   transition: all 0.4s ease;
 }
 
-#navbar-btn {
+#navbar-btn-prim {
   color: black;
-  border-radius: 10px;
   background-color: #F0A500;
-  border: none;
-  padding-inline: 10px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  border-color: #F0A500;
+  border-radius: 10px;
+  padding: 10px;
+  border-width: 2px;
   text-decoration: none;
-  margin-inline: 5px;
+  margin-right: 10px;
 }
 
-#navbar-btn:hover {
-  color: #F0A500;
-  background-color: black;
+#navbar-btn-prim:hover {
+  background-color: #ffae00;
   transition: all 0.4s ease;
 }
 
@@ -51,6 +49,22 @@
 
 .secondary-btn:hover {
   background-color: #f0a400a8;
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+
+#navbar-btn-sec {
+  color: #F0A500;
+  border-color: #F0A500;
+  border-radius: 10px;
+  padding: 10px;
+  border-width: 2px;
+  text-decoration: none;
+}
+
+#navbar-btn-sec:hover {
+  color: black;
+  background-color: #F0A500;
   font-weight: 500;
   transition: all 0.4s ease;
 }
