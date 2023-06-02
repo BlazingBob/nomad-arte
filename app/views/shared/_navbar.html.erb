@@ -1,17 +1,20 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag("nomadarte logo.png") %>
+      <%= image_tag("nomadarte_logo.png") %>
     <% end %>
 
     <div class="d-flex justify-content-center">
       <div class="input-group">
-        <form action="<%= items_path %>" method="GET" class="d-flex">
-          <input type="text" class="form-control form-control-sm" name="query" placeholder="Rent your art" aria-label="Search" aria-describedby="button-addon2">
-          <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
-        </form>
+        <%= form_tag(items_path, method: :get, class: "d-flex") do %>
+          <%= text_field_tag(:query, nil, class: "form-control form-control-sm", placeholder: "Rent your art") %>
+          <%= button_tag(type: "submit", class: "btn btn-outline-secondary", id: "button-addon2") do %>
+            Search
+          <% end %>
+        <% end %>
       </div>
     </div>
+
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -23,12 +26,12 @@
           <li class="nav-item active">
             <%= link_to "Browse catalog", items_path, class: "nav-link" %>
           </li>
-          <li class="nav-item">
-            <%= link_to "Upload an item", new_item_path, class: "nav-link" %>
+          <li >
+            <%= link_to "Upload new item", new_item_path, class: "btn", id: "navbar-btn" %>
           </li>
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
+            <%= image_tag "pdiakjeemou4s9c1386jl5janddl-Circle.webp", class: "avatar", alt: "dropdown menu" %>
           </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Dashboard", "/dashboard", class: "dropdown-item" %>
