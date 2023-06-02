@@ -73,3 +73,19 @@
   font-weight: 500;
   transition: all 0.4s ease;
 }
+
+#search-btn-sec {
+  color: #F0A500;
+  border-color: #F0A500;
+  border-radius: 10px;
+  padding: 10px;
+  border-width: 2px;
+  text-decoration: none;
+}
+
+#search-btn-sec:hover {
+  color: rgb(255, 166, 0);
+  background-color: #000000;
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
