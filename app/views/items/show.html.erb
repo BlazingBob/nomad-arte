@@ -3,45 +3,51 @@
     <div class="col-6 align-self-center">
       <div class= "item-image">
         <% if @item.image.attached? %>
-          <%= cl_image_tag(@item.image.key) %>
+          <%= cl_image_tag(@item.image.key, class:"show-image") %>
         <% else %>
           <div class="d-flex justify-content-center alert alert-info">Something went wrong, your photo will be displayed soon</div>
           <%= image_tag "nomadarte_logo.png", alt: "Photo placeholder" %>
         <% end %>
       </div>
     </div>
+
     <div class="col"></div>
-    <div class="col-4 align-self-center">
+      <div class="col-4 align-self-center">
       <div class="item-info">
         <h1><%= @item.name %></h1>
         <p><%= @item.description %></p>
-        <p>Price per day</p>
-        <p><strong><%= number_to_currency(@item.price_per_day) %></strong></p>
+        <p>Price per day <strong><%= number_to_currency(@item.price_per_day) %></strong></p>
         <p>Category: <%= @item.category_name %></p>
         <p><i>Owner: <%= @item.user.username %></i></p>
       </div>
+          <div class="col-12 mt-3 book-form">
+      <fieldset>
+        <%= simple_form_for [@item, @booking] do |f| %>
+        <%= f.input :start_date, as: :date, order: [:day, :month, :year] %>
+        <%= f.input :end_date, as: :date, order: [:day, :month, :year] %>
+        <%#= f.input :total_price %>
+        <%= f.button :submit, "Rent it", class: "button primary-btn" %>
+        <% end %>
+      </fieldset>
+    </div>
     </div>
 
     <div class="col align-self-start">
-        <button type="button" class="btn btn-outline-secondary">
+        <button type="button" class="btn btn-outline-secondary" id="heart-button">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
             <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"></path>
           </svg>
         </button>
     </div>
-
-    <div class="col-6 book-form">
-      <fieldset>
-        <%= simple_form_for [@item, @booking] do |f| %>
-        <%= f.input :start_date, as: :date, order: [:day, :month, :year] %>
-        <%= f.input :end_date, as: :date, order: [:day, :month, :year] %>
-        <%= f.input :total_price %>
-        <%= f.button :submit, "Rent it" %>
-      <% end %>
-      </fieldset>
-    </div>
   </div>
 </div>
 
+  <script>
+    const btn = document.getElementById("heart-button")
+    console.log(btn)
+    btn.addEventListener('click', (e) => {
+    btn.classList.toggle('heart-button')
+   })
+  </script>
 
  <%# <%= link_to "Back to index", items_path %>

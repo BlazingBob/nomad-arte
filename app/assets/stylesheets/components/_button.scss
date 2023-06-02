@@ -6,6 +6,12 @@
   margin-top: 20px;
 }
 
+.button:hover {
+  background-color: #F0A500;
+  transition: all 0.4s ease;
+  color: black;
+}
+
 .full-width-btn {
   width: 100%;
 }
@@ -51,6 +57,14 @@
   background-color: #f0a400a8;
   font-weight: 500;
   transition: all 0.4s ease;
+}
+
+.heart-button {
+background-color: #F0A500 !important;
+}
+
+#heart-button:hover {
+  background-color: #f0a400a8 !important;
 }
 
 #navbar-btn-sec {
