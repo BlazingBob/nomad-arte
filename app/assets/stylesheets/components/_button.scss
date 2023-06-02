@@ -3,7 +3,11 @@
   border-radius: 4px;
   width: 100%;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 5px;
+}
+
+.button:hover {
+  color: black;
 }
 
 .full-width-btn {
@@ -35,16 +39,17 @@
 }
 
 #navbar-btn-prim:hover {
-  background-color: #ffae00;
+  background-color: #ffbc2a;
+  border-color: #ffbc2a;
   transition: all 0.4s ease;
 }
 
 .secondary-btn {
-  border-color: #F0A500;
+  border: 2px solid #F0A500;
   border-radius: 10px;
   padding: 10px;
-  border-width: 2px;
   text-decoration: none;
+  text-align: center;
 }
 
 .secondary-btn:hover {
@@ -65,6 +70,22 @@
 #navbar-btn-sec:hover {
   color: black;
   background-color: #F0A500;
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+
+#search-btn-sec {
+  color: #F0A500;
+  border-color: #F0A500;
+  border-radius: 10px;
+  padding: 10px;
+  border-width: 2px;
+  text-decoration: none;
+}
+
+#search-btn-sec:hover {
+  color: rgb(255, 166, 0);
+  background-color: #000000;
   font-weight: 500;
   transition: all 0.4s ease;
 }
