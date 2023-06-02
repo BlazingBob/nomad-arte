@@ -1,6 +1,7 @@
 class Item < ApplicationRecord
   belongs_to :user
   has_one_attached :image
+  has_many :bookings, dependent: :destroy
 
   validates :name, :description, :price_per_day, presence: true
   validates :description, length: { minimum: 5 }
