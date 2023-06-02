@@ -3,7 +3,6 @@ class ItemsController < ApplicationController
     @items = Item.all
     @query = params[:query]
     if @query.present?
-      sql_subquery = "title ILIKE ? OR synopsis ILIKE :query"
       @items = Item.where('name ILIKE ?', "%#{@query}")
     else
       "No results found"
