@@ -13,7 +13,7 @@
 !/log/.keep
 !/tmp/.keep
 
-# Ignore pidfiles, but keep the directory.
+# Ignore pidfiles, but keep the xdirectory.
 /tmp/pids/*
 !/tmp/pids/
 !/tmp/pids/.keep
