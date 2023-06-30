@@ -19,3 +19,19 @@
 .nav-link:hover {
   color: #f0a400ae;
 }
+
+.search-field {
+  border: 2px solid #F0A500;
+  border-radius: 10px;
+}
+
+#search-input {
+  color: #F0A500;
+  border-width: 0px;
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
+  background-color: black;
+  cursor: text;
+  height: 44px;
+}

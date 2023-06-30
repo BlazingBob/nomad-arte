@@ -42,6 +42,8 @@
   border-width: 2px;
   text-decoration: none;
   margin-right: 10px;
+  height: 44px;
+  line-height: 19px;
 }
 
 #navbar-btn-prim:hover {
@@ -78,7 +80,10 @@ background-color: #F0A500 !important;
   border-radius: 10px;
   padding: 10px;
   border-width: 2px;
+  margin-right: 10px;
   text-decoration: none;
+  height: 44px;
+  line-height: 19px;
 }
 
 #navbar-btn-sec:hover {
@@ -88,18 +93,17 @@ background-color: #F0A500 !important;
   transition: all 0.4s ease;
 }
 
-#search-btn-sec {
+#search-btn {
   color: #F0A500;
-  border-color: #F0A500;
-  border-radius: 10px;
   padding: 10px;
-  border-width: 2px;
   text-decoration: none;
+  border: 0px;
+  border-radius: 7px;
 }
 
-#search-btn-sec:hover {
-  color: rgb(255, 166, 0);
-  background-color: #000000;
+#search-btn:hover {
+  color: black;
+  background-color: #F0A500;
   font-weight: 500;
   transition: all 0.4s ease;
 }
