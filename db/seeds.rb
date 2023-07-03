@@ -9,7 +9,7 @@
 Item.destroy_all
 User.destroy_all
 
-lunna = User.create!(email: "lunna@hotmail.com", password: "123456!", firstname: "Lunna", lastname: "Pomeranian", username: "Lunna")
+lunna = User.create!(email: "lunna@hotmail.com", password: "123456", firstname: "Lunna", lastname: "Pomeranian", username: "Lunna")
 
 # Item.create!(name: "Lua", description: "Mirror" , price_per_day: "20€", category_name: "Baroque", user: lunna, image_url: "https://img5.su-cdn.com/cdn-cgi/image/width=600,height=600,format=webp/mall/file/2023/05/15/77f1a7ecb97a0097b363f5f152b29495.jpg")
 
@@ -47,5 +47,3 @@ file = URI.open("https://dam.sothebys.com/dam/image/Item/8b549135-00b4-45b7-a6e8
 item = Item.new(name: "Sebastião Salgado", description: "Photograph" , price_per_day: 119, category_name: "Photographs", user: lunna)
 item.image.attach(io: file, filename: "nes.png", content_type: "image/png")
 item.save!
-
- 
