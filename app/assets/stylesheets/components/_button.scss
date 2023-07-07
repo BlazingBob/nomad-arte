@@ -36,14 +36,12 @@
 #navbar-btn-prim {
   color: black;
   background-color: #F0A500;
-  border-color: #F0A500;
+  border: 2px solid #F0A500;
   border-radius: 10px;
   padding: 10px;
-  border-width: 2px;
   text-decoration: none;
-  margin-right: 10px;
-  height: 44px;
-  line-height: 19px;
+  text-align: center;
+  width: max-content;
 }
 
 #navbar-btn-prim:hover {
@@ -76,14 +74,13 @@ background-color: #F0A500 !important;
 
 #navbar-btn-sec {
   color: #F0A500;
-  border-color: #F0A500;
+  border: 2px solid #F0A500;
   border-radius: 10px;
   padding: 10px;
-  border-width: 2px;
-  margin-right: 10px;
   text-decoration: none;
-  height: 44px;
-  line-height: 19px;
+  text-align: center;
+  width: max-content;
+
 }
 
 #navbar-btn-sec:hover {
