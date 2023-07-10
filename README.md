@@ -6,7 +6,7 @@ NomadArte is an innovative online marketplace that empowers art enthusiasts to r
 
 Currently, NomadArte offers the following functionalities:
 
-- **Rent Artwork:** Browse through our growing catalogue of artworks and check the pieces you love the most.
+- **Rent Artwork:** Browse through our growing catalog of artworks and check the pieces you love the most.
 - **Lease Artwork:** Allow others to enjoy your artwork pieces by adding them to our catalog.
 
 ### Upcoming Features
