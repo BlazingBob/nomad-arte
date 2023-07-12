@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_01_131253) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_12_093856) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -50,7 +50,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_01_131253) do
     t.float "total_price", default: 0.0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "order_id", null: false
     t.index ["item_id"], name: "index_bookings_on_item_id"
+    t.index ["order_id"], name: "index_bookings_on_order_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
@@ -66,6 +68,24 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_01_131253) do
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.decimal "total"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.bigint "order_id", null: false
+    t.string "status"
+    t.string "transaction_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_payments_on_order_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -78,6 +98,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_01_131253) do
     t.string "lastname"
     t.boolean "is_owner", default: false
     t.string "username"
+    t.string "stripe_customer_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -85,6 +106,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_01_131253) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookings", "items"
+  add_foreign_key "bookings", "orders"
   add_foreign_key "bookings", "users"
   add_foreign_key "items", "users"
+  add_foreign_key "orders", "users"
+  add_foreign_key "payments", "orders"
 end
