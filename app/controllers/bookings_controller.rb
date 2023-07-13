@@ -4,27 +4,39 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.item = @item
     @booking.user = current_user
-
+    number_of_days = (@booking.end_date - @booking.start_date).to_i
+    @booking.total_price = (number_of_days * @item.price_per_day)
     if @booking.save
-      begin
-        Stripe::Charge.create(
-          customer: current_user.stripe_customer_id,
-          amount: (@item.price_per_day * (@booking.end_date - @booking.start_date).to_i).to_i * 100, # amount in cents
-          description: "Booking charge for #{current_user.email}",
-          currency: 'eur' # Change this to your desired currency
-        )
-        redirect_to item_path(@item), notice: "Booking confirmed!"
-      rescue Stripe::CardError => e
-        flash[:error] = e.message
-        @booking.destroy
-        render :new
-      end
+      price = Stripe::Price.create(
+        {
+          unit_amount: (@booking.total_price * 100).to_i,
+          currency: 'eur',
+          product_data: {
+            name: @booking.item.name,
+          }
+        }
+      )
+
+      session = Stripe::Checkout::Session.create(
+        {
+          line_items: [
+            {
+              price: price.id,
+              quantity: 1
+            }
+          ],
+          mode: 'payment',
+          success_url: dashboard_url,
+          cancel_url: new_item_booking_payment_url(@item.id, @booking.id)
+        }
+      )
+
+      @booking.update(stripe_session_id: session.id) # sla de sessie-ID op in de database, zodat je deze kunt gebruiken in de view
+      redirect_to checkout_booking_path(@booking) # redirect naar de checkout pagina voor deze boeking
     else
       render :new, status: :unprocessable_entity
     end
   end
-
-
 
   private
 
