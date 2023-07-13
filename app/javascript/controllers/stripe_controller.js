@@ -15,6 +15,5 @@ export default class extends Controller {
   checkout() {
     this.stripe.redirectToCheckout({
       sessionId: this.sessionIdValue
-
   })}
 }

@@ -1,9 +1,21 @@
-<div class="container">
-  <div class="row py-4">
-    <div class="col">
-      <h1>Checkout summary</h1>
-      <p>Purchase of <strong><%= @booking.item.name %></strong> <%= @booking.item.description %> for <strong><%= humanized_money_with_symbol @booking%></strong></p>
-      <button id="pay" class="btn btn-primary">Pay</button>
+<div class="row justify-content-center">
+  <div class="col-xl-5">
+    <div class="card p-5">
+      <div class="mb-1 d-flex flex-column justify-content-center">
+        <h1>Checkout summary</h1>
+        <hr>
+        <div class="align-self-center">
+          <h6>
+            <strong><%= @booking.item.name %></strong> <%= @booking.item.description %>
+            <br>
+            <br>
+            Price per day: <%= humanized_money_with_symbol @booking.item.price_per_day%>
+          </h6>
+        </div>
+      </div>
+      <div> <%= cl_image_tag(@booking.item.image.key, class: "show-image p-4") %></div>
+      <h6 class="text-center">Total price: <strong><%= humanized_money_with_symbol @booking.total_price%></strong></h6>
+      <button id="pay" class="primary-btn">Checkout</button>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
         const paymentButton = document.getElementById('pay');

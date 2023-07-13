@@ -32,7 +32,7 @@ class BookingsController < ApplicationController
       )
 
       @booking.update(stripe_session_id: session.id) # sla de sessie-ID op in de database, zodat je deze kunt gebruiken in de view
-      redirect_to checkout_booking_path(@booking) # redirect naar de checkout pagina voor deze boeking
+      redirect_to  new_item_booking_payment_path(@item, @booking) # redirect naar de checkout pagina voor deze boeking
     else
       render :new, status: :unprocessable_entity
     end

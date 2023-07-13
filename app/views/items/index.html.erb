@@ -23,7 +23,7 @@
                 <div class="text-decoration-underline d-flex justify-content-between">
                   <div class="text-start"><%= item.name %></div>
                   <div class="text-end">
-                    <span style="font-weight: bold; font-size: 1.1em;"><%= item.price_per_day %>$</span>
+                    <span style="font-weight: bold; font-size: 1.1em;"><%= humanized_money_with_symbol item.price_per_day %></span>
                   </div>
                 </div>
                 <div>
