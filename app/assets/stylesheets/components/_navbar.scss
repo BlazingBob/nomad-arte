@@ -3,6 +3,10 @@
   background: black;
 }
 
+.navbar-nav {
+  z-index: 1;
+}
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }

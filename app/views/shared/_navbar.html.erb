@@ -13,7 +13,6 @@
         </div>
       <% end %>
     </div>
-    <%# Idee: Div hieromheen voor rechter items, justify-content-between %>
     <button class="navbar-toggler" type: "button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -21,10 +20,10 @@
       <ul class="navbar-nav ml-auto">
         <% if user_signed_in? %>
           <li class="d-flex">
-            <%= link_to "Browse catalog", items_path, id: "navbar-btn-sec" %>
+            <%= link_to "Browse catalog", items_path, id: "browse-btn" %>
           </li>
           <li class="d-flex">
-            <%= link_to "Upload new item", new_item_path, id: "navbar-btn-prim" %>
+            <%= link_to "Upload new item", new_item_path, id: "upload-btn" %>
           </li>
           <li class="dropdown">
             <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -38,14 +37,13 @@
           </li>
         <% else %>
           <li>
-            <%= link_to "Login", new_user_session_path, class: "btn", id: "navbar-btn-sec" %>
+            <%= link_to "Login", new_user_session_path, id: "inlog-btn" %>
           </li>
           <li>
-            <%= link_to "Sign up", new_user_registration_path, class: "btn", id: "navbar-btn-prim" %>
+            <%= link_to "Sign up", new_user_registration_path, id: "signup-btn" %>
           </li>
         <% end %>
       </ul>
     </div>
-    <%# Einde div %>
   </div>
 </div>
