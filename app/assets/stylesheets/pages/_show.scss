@@ -69,5 +69,6 @@ h1 {
 // }
 
 .show-image {
-  width: 550px;
+  width: 100%;
+  box-sizing: border-box;
 }

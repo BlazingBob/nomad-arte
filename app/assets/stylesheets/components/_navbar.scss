@@ -7,6 +7,10 @@
   flex-grow: 0;
 }
 
+.navbar-brand {
+  z-index: 1;
+}
+
 .navbar-lewagon .navbar-brand img {
   width: fit-content;
   height: 40px;
@@ -21,7 +25,7 @@
 }
 
 .search-field {
-  border: 2px solid #F0A500;
+  border: 1px solid #F0A500;
   border-radius: 10px;
 }
 
@@ -34,4 +38,13 @@
   background-color: black;
   cursor: text;
   height: 44px;
+}
+
+.input-group {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 0;
 }

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_01_131253) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_13_092420) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -50,6 +50,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_01_131253) do
     t.float "total_price", default: 0.0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "stripe_session_id"
     t.index ["item_id"], name: "index_bookings_on_item_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -78,6 +79,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_01_131253) do
     t.string "lastname"
     t.boolean "is_owner", default: false
     t.string "username"
+    t.string "stripe_customer_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

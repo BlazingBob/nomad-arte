@@ -30,23 +30,42 @@
 
 .primary-btn:hover {
   background-color: #F0A500;
+  color: black;
   transition: all 0.4s ease;
 }
 
 #navbar-btn-prim {
   color: black;
   background-color: #F0A500;
-  border: 2px solid #F0A500;
+  border: 1px solid #F0A500;
   border-radius: 10px;
+  margin-right: 10px;
   padding: 10px;
   text-decoration: none;
   text-align: center;
   width: max-content;
+  z-index: 1;
 }
 
 #navbar-btn-prim:hover {
   background-color: #ffbc2a;
   border-color: #ffbc2a;
+  transition: all 0.4s ease;
+}
+
+#navbar-btn-sec {
+  color: #F0A500;
+  margin-right: 10px;
+  line-height: 46px;
+  text-decoration: none;
+  text-align: center;
+  width: max-content;
+  z-index: 1;
+}
+
+#navbar-btn-sec:hover {
+  color: #f0a400bb;
+  font-weight: 500;
   transition: all 0.4s ease;
 }
 
@@ -70,24 +89,6 @@ background-color: #F0A500 !important;
 
 #heart-button:hover {
   background-color: #f0a400a8 !important;
-}
-
-#navbar-btn-sec {
-  color: #F0A500;
-  border: 2px solid #F0A500;
-  border-radius: 10px;
-  padding: 10px;
-  text-decoration: none;
-  text-align: center;
-  width: max-content;
-
-}
-
-#navbar-btn-sec:hover {
-  color: black;
-  background-color: #F0A500;
-  font-weight: 500;
-  transition: all 0.4s ease;
 }
 
 #search-btn {

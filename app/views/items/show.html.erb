@@ -15,7 +15,7 @@
       <div class="item-info">
         <h1><%= @item.name %></h1>
         <p><%= @item.description %></p>
-        <p>Price per day <strong><%= number_to_currency(@item.price_per_day) %></strong></p>
+        <p>Price per day <strong><%= humanized_money_with_symbol @item.price_per_day %></strong></p>
         <p>Category: <%= @item.category_name %></p>
         <p><i>Owner: <%= @item.user.username %></i></p>
       </div>
@@ -25,7 +25,7 @@
             <%= f.input :start_date, as: :date, order: [:day, :month, :year] %>
             <%= f.input :end_date, as: :date, order: [:day, :month, :year] %>
             <%#= f.input :total_price %>
-            <%= f.button :submit, "Rent it", class: "button primary-btn" %>
+            <%= f.button :submit, "Rent now!", class: "button primary-btn" %>
           <% end %>
         </fieldset>
       </div>
