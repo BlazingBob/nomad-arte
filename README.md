@@ -8,11 +8,11 @@ Currently, NomadArte offers the following functionalities:
 
 - **Rent Artwork:** Browse through our growing catalog of artworks and check the pieces you love the most.
 - **Lease Artwork:** Allow others to enjoy your artwork pieces by adding them to our catalog.
+- **Secure Payment:** We have implemented a secure payment gateway using Stripe API to ensure all transactions are safe and reliable.
 
 ### Upcoming Features
 
 We're continuously working on improving and expanding our services. Here are some of the features we're hoping to implement soon:
 
-- **Secure Payment:** We're implementing a secure payment gateway to ensure all transactions are safe and reliable.
 - **Favorites List:** Soon, you'll be able to save your favorite artworks, making them quick and easy to find.
 - **Personal Dashboard:** We're working on a dashboard where you can view all your information and transactions at a glance.
