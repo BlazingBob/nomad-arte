@@ -1,37 +1,34 @@
-.button {
-  padding: 10px 20px;
-  border-radius: 4px;
-  width: 100%;
-  text-align: center;
-  margin-top: 5px;
-}
-
-.button:hover {
-  color: black;
-}
-
-.button:hover {
-  background-color: #F0A500;
-  transition: all 0.4s ease;
-  color: black;
-}
-
-.full-width-btn {
-  width: 100%;
-}
-
 .primary-btn {
   color: #F0A500;
   border-radius: 10px;
   background-color: black;
   border: none;
   padding: 10px;
+  text-align: center;
 }
 
 .primary-btn:hover {
   background-color: #F0A500;
   color: black;
   transition: all 0.4s ease;
+}
+
+.secondary-btn {
+  border: 2px solid #F0A500;
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.secondary-btn:hover {
+  background-color: #f0a400d8;
+  color: rgba(0, 0, 0, 0.798);
+  transition: all 0.4s ease;
+}
+
+.full-width-btn {
+  width: 100%;
 }
 
 #upload-btn {
@@ -105,26 +102,12 @@
   transition: all 0.4s ease;
 }
 
-.secondary-btn {
-  border: 2px solid #F0A500;
-  border-radius: 10px;
-  padding: 10px;
-  text-decoration: none;
-  text-align: center;
-}
-
-.secondary-btn:hover {
-  background-color: #f0a400a8;
-  font-weight: 500;
-  transition: all 0.4s ease;
-}
-
 .heart-button {
-background-color: #F0A500 !important;
+background-color: #F0A500;
 }
 
 #heart-button:hover {
-  background-color: #f0a400a8 !important;
+  background-color: #f0a400a8;
 }
 
 #search-btn {

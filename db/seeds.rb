@@ -34,7 +34,7 @@ item.image.attach(io: file, filename: "nes.png", content_type: "image/png")
 item.save!
 
 file = URI.open("https://sothebys-md.brightspotcdn.com/dims4/default/51a3a74/2147483647/strip/true/crop/3081x4042+0+0/resize/800x1050!/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fmedia-desk%2F89%2F76%2F1389c8e147249f1a2d157dc7c54a%2Fandywarholnewcokedrawing.jpg")
-item = Item.new(name: "Andy Warhol", description: "Drawing" , price_per_day: 69, category_name: "Contamporary", user: lunna)
+item = Item.new(name: "Andy Warhol", description: "Drawing" , price_per_day: 69, category_name: "Contemporary", user: lunna)
 item.image.attach(io: file, filename: "nes.png", content_type: "image/png")
 item.save!
 
