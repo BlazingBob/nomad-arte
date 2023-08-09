@@ -31,6 +31,12 @@
   width: 100%;
 }
 
+.item-card:hover .primary-hover {
+  background-color: #F0A500;
+  color: black;
+  transition: all 0.4s ease;
+}
+
 #upload-btn {
   color: black;
   background-color: #F0A500;
