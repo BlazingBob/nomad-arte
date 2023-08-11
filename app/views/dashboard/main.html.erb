@@ -14,30 +14,51 @@
         <% end %>
       <% end %>
       <br>
-      <div class="">
-        <div class="d-flex justify-content-start">
-          <h2>Your listed items</h2>
-        </div>
-        <div class="row">
-          <% @items.each do |item| %>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <%= link_to item_path(item), class: "text-decoration-none" do %>
-                <div class="item-card">
-                  <div class="card-img" style="background-image: url('<%= cl_image_path item.image.key %>');"></div>
-                  <div class="card-info px-3">
-                    <div class="d-flex justify-content-between">
-                      <div class="text-start text-decoration-underline"><%= item.name %></div>
-                      <div class="text-end text-decoration-underline">
-                        <span style="font-weight: bold; font-size: 1.1em;"><%= humanized_money_with_symbol item.price_per_day %>/day</span>
-                      </div>
+      <div class="card d-flex justify-content-start">
+        <h2>Your listed items</h2>
+      </div>
+      <div class="row">
+        <% @items.each do |item| %>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <%= link_to item_path(item), class: "text-decoration-none" do %>
+              <div class="item-card">
+                <div class="card-img" style="background-image: url('<%= cl_image_path item.image.key %>');"></div>
+                <div class="card-info px-3">
+                  <div class="d-flex justify-content-between">
+                    <div class="text-start text-decoration-underline"><%= item.name %></div>
+                    <div class="text-end text-decoration-underline">
+                      <span style="font-weight: bold; font-size: 1.1em;"><%= humanized_money_with_symbol item.price_per_day %>/day</span>
                     </div>
-                    <p>Category: <%= item.category_name%></p>
                   </div>
+                  <p>Category: <%= item.category_name%></p>
                 </div>
-              <% end %>
-            </div>
-          <% end %>
-        </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+      <div class="card d-flex justify-content-start">
+        <h2>Currently renting</h2>
+      </div>
+      <div class="row">
+        <% @items.each do |item| %>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <%= link_to item_path(item), class: "text-decoration-none" do %>
+              <div class="item-card">
+                <div class="card-img" style="background-image: url('<%= cl_image_path item.image.key %>');"></div>
+                <div class="card-info px-3">
+                  <div class="d-flex justify-content-between">
+                    <div class="text-start text-decoration-underline"><%= item.name %></div>
+                    <div class="text-end text-decoration-underline">
+                      <span style="font-weight: bold; font-size: 1.1em;"><%= humanized_money_with_symbol item.price_per_day %>/day</span>
+                    </div>
+                  </div>
+                  <p>Category: <%= item.category_name%></p>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

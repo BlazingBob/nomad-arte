@@ -13,11 +13,12 @@
     <div class="col"></div>
     <div class="col-4 align-self-center">
       <div class="item-info">
-        <h1><%= @item.description %> by <%= @item.name %></h1>
+        <h1><%= @item.name %> by <%= @item.artist %></h1>
         <hr>
-        <p>Price per day: <strong><%= humanized_money_with_symbol @item.price_per_day %></strong></p>
-        <p>Category: <%= @item.category_name %></p>
-        <p><i>Owner: <%= @item.user.username %></i></p>
+        <p><%= @item.description %></p>
+        <p><strong><%= humanized_money_with_symbol @item.price_per_day %></strong>/day</p>
+        <p><%= @item.category_name %></p>
+        <p><i>Owned by <%= @item.user.username %></i></p>
       </div>
       <div class="col-12 mt-3 book-form">
         <fieldset>
